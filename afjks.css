@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        .body {
+            background-color: mistyrose;
+            text-align: center;
+        }
+        .body__title {
+            color: black;
+        }
+
+
+       .body__img {
+        width: 50%;
+        border-radius: 50%;
+        image-orientation: center;
+       } 
+    </style>
+</head>
+
+<body class="body">
+    <h1 class="body__title">¿Quieres ser mi San Valentín?</h1>
+    <img 
+    src="https://pbs.twimg.com/media/D-VZBmKWsAEd-_0?format=jpg&name=large" 
+    alt="♡" class="body__img"/>
+    <button id="yes">Sí♡</button>
+    <button id="no">Ño</button>
+
+    <script>
+        const vutonsi = document.getElementById('yes');
+        const vutonno = document.getElementById('no');
+
+        const cita = () => {
+            alert('Te amo♡');
+            alert('vamos a coger');
+            location.href = 'https://youtu.be/XphpZFK4Y90?t=65';
+        }
+
+        const evitarelno = () => {
+            vutonno.style.position = 'absolute';
+            vutonno.style.top = (Math.random() * window.innerHeight) + 'px';
+            vutonno.style.left = (Math.random() * window.innerWidth) + 'px';
+        }
+
+        vutonsi.addEventListener('click', cita);
+        vutonno.addEventListener('mouseover', evitarelno);
+    </script>
+</body>
+
+</html>
